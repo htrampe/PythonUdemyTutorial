@@ -22,7 +22,7 @@ def createNewPassword():
     service = input("Bitte Service eingeben: ")
     key = input("Bitte Key eingeben: ")
     hint = input("Bitte Hinweis eingeben (oder Enter für keinen Hinweis): ")
-    passwords.append(Password(service = service, key = encryptKey(key), hint= hint))
+    passwords.append(Password(service = service, key = encryptKey(key), hint = hint))
     mainMenu()
 
 def showAllPasswords():
