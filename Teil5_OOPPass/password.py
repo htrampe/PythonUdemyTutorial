@@ -1,3 +1,5 @@
+from cryptography.fernet import Fernet
+
 class Password:
 
     _key = ""
@@ -8,6 +10,10 @@ class Password:
         self._key = key
         self._service = service
         self._hint = hint
+
+    def getDecryptKey(self, masterkey):
+        f = Fernet(masterkey)
+        return f.decrypt(self._key)
 
     @property
     def service(self):
