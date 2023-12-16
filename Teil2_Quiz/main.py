@@ -1,5 +1,6 @@
 from fragen import *
 
+
 punkte = 0
 maxPunkte = 0
 
