@@ -34,7 +34,6 @@ def createNewPassword():
 def getAllPasswords():
     global masterkey
     localPasswords = []
-    fernet = Fernet(masterkey)
     con = createConnection()
     cur = con.cursor()
     result = cur.execute("select * from passwords")
